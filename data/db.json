@@ -1,24 +1,19 @@
 {
   "notes": [
     {
-      "title": "Test Title",
-      "text": "Test text",
+      "title": "Grocery List",
+      "text": "Meat\npotato\ncarrots\ncelery",
+      "id": "0"
+    },
+    {
+      "title": "Movie List",
+      "text": "The Matrix\nThe Witcher\nLast Kingdom",
       "id": "1"
     },
     {
-      "title": "Test Title2",
-      "text": "Test text2",
+      "title": "Glass Recycling",
+      "text": "Take the glass recycling box to cottonwood heights",
       "id": "2"
-    },
-    {
-      "title": "Test Title3",
-      "text": "Test text3",
-      "id": "3"
-    },
-    {
-      "title": "to-do list",
-      "text": "paint, brush, tissue paper",
-      "id": "3"
     }
   ]
 }
