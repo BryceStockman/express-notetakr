@@ -1,9 +1,11 @@
 const router = require('express').Router();
+const fs = require('fs');
 
 const {
   filterByQuery,
   findById,
   createNewNote,
+  deleteNote,
   validateNote,
 } = require('../../lib/notes');
 const { notes } = require('../../data/db');
@@ -36,14 +38,11 @@ router.post('/notes', (req, res) => {
   }
 });
 
-router.delete('/api/notes/:id', (req, res) => {
+router.delete('/notes/:id', (req, res) => {
   const filteredNote = notes.filter((note) => {
     return req.params.id != note.id;
   });
-  fs.writeFileSync(
-    path.join(__dirname, '../../data/db.json'),
-    JSON.stringify({ notes: filteredNote }, null, 2)
-  );
+  deleteNote(filteredNote);
   res.end();
 });
 
